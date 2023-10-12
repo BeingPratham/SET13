@@ -4,6 +4,7 @@ import './armstrong.css';
 export default function Armstrong() {
   const [num, setNum] = useState();
   const [isTrue, setIsTrue] = useState(null);
+  const [isPrime, setIsprime] = useState(null);
   const HandleNum = (e)=>{
     setNum(e.target.value);
   }
@@ -24,14 +25,42 @@ export default function Armstrong() {
     }
     setIsTrue(og===sum);
   }
+  const CheckPrime = () =>{
+    if(parseInt(num)===1){
+        isPrime(null);
+    }
+    else if(parseInt(num)>1){
+        for(let i=2;i<parseInt(num)/2;i++){
+            if(parseInt(num)%i===0){
+                setIsprime(false);
+                break;
+            }
+            else{
+                setIsprime(true);
+            }
+        }
+        
+    }
+  }
   return (
     <div className='arm-strong'>
-        <h4>Enter Armstrong Number:- </h4>
+        <h1><center>SET-1,3</center></h1>
+        <h4>Enter Number:- </h4>
         <input type='text' pattern="[0-9]" value={num} onChange={HandleNum}></input>
+        <br></br>
         <button type='submit' onClick={Check}>Check</button>
+        <br></br>
+        <br></br>
+        <button type='submit' onClick={CheckPrime}>Check Prime</button>
         {isTrue!==null && (
             <p>
                 {isTrue?"Armstrong Number" : "Not Armstrong Number"}
+            </p>
+        )}
+        <br></br>
+        {isPrime!==null && num!==1 &&(
+            <p>
+                {isPrime?"Prime Number" : "Not Prime Number"}
             </p>
         )}
     </div>
