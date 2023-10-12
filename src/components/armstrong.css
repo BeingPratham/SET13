@@ -1,0 +1,36 @@
+.arm-strong{
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 300px;
+    margin-left: 40%;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding-left: 20px;
+
+}
+.arm-strong h4, p{
+    color: white;
+}
+.arm-strong  button {
+    /* background-color: #007bff; */
+    background-color: #4666FF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .arm-strong button:hover {
+    background-color: #0056b3;
+  }
+  .arm-strong input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #171717;
+  }
